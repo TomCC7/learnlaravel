@@ -11,10 +11,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//静态页面  staticpages
 Route::get('/', 'StaticPagesController@home')->name('home');
 Route::get('/help', 'StaticPagesController@help')->name('help');
 Route::get('/about', 'StaticPagesController@about')->name('about');
+//用户控制器    users
 Route::get('signup', 'UsersController@create')->name('signup');
 Route::resource('users', 'UsersController');
 // equivalent to
@@ -25,3 +26,8 @@ Route::resource('users', 'UsersController');
 // Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit');
 // Route::patch('/users/{user}', 'UsersController@update')->name('users.update');
 // Route::delete('/users/{user}', 'UsersController@destroy')->name('users.destroy');
+
+//会话控制器    sessions
+Route::get('login', 'SessionsController@create')->name('login');
+Route::post('login', 'SessionsController@store')->name('login');
+Route::delete('logout', 'SessionsController@destroy')->name('logout');
