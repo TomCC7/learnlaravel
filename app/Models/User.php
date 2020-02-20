@@ -36,6 +36,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
     //gravatar 头像系统
     public function gravatar($size = '100')
     {
