@@ -64,16 +64,47 @@ section.user_info {
     float: left;
     max-width: 50px;
     border-radius: 50%;
+
+    /* Users edit */
+
+    .gravatar_edit {
+        margin: 15px auto;
+        text-align: center;
+
+        .gravatar {
+            float: none;
+            max-width: 100px;
+        }
+    }
 }
 
-/* Users edit */
+.stats {
+    overflow: auto;
+    margin-top: 0;
+    padding: 0;
 
-.gravatar_edit {
-    margin: 15px auto;
-    text-align: center;
+    a {
+        float: left;
+        padding: 0 10px;
+        text-align: center;
+        width: 33%;
+        border-left: 1px solid #eee;
+        color: #33383c;
 
-    .gravatar {
-        float: none;
-        max-width: 100px;
+        &:first-child {
+            padding-left: 0;
+            border: 0;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: #337ab7;
+        }
+    }
+
+    strong {
+        display: block;
+        font-size: 1.2em;
+        color: black;
     }
 }
